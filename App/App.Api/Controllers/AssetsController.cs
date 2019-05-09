@@ -20,8 +20,33 @@ namespace App.Api.Controllers
         {
             try
             {
+                var list = new List<AssetDto>()
+                {
+                    new AssetDto {
+                        Id = "276382634826482",
+                        Name = "Scirocco",
+                        Description = "Volkswagen Scirocco",                        
+                        },
 
-                return new ServiceResponse<IEnumerable<AssetDto>> { Success = true, Data = new List<AssetDto>() };
+                    new AssetDto {
+                        Id = "873985658534232",
+                        Name = "Golf GTI",
+                        Description = "Volkswagen Golf GTI",
+                        },
+                    new AssetDto {
+                        Id = "83758764764576894",
+                        Name = "Focus",
+                        Description = "Ford Focus",
+                        },
+
+                    new AssetDto {
+                        Id = "293424728974924324",
+                        Name = "Mustang",
+                        Description = "Ford Mustang",
+                        },
+                };
+
+                return new ServiceResponse<IEnumerable<AssetDto>> { Success = true, Data = list };
             }
             catch (Exception ex)
             {

@@ -26,3 +26,17 @@ D:\LIGHUEN\software\App\App.Api\obj\Debug\netcoreapp2.1\App.Api.AssemblyInfo.cs
 D:\LIGHUEN\software\App\App.Api\obj\Debug\netcoreapp2.1\App.Api.RazorTargetAssemblyInfo.cache
 D:\LIGHUEN\software\App\App.Api\obj\Debug\netcoreapp2.1\App.Api.dll
 D:\LIGHUEN\software\App\App.Api\obj\Debug\netcoreapp2.1\App.Api.pdb
+D:\LIGHUEN\GIT\Dealership\App\App.Api\bin\Debug\netcoreapp2.1\App.Api.deps.json
+D:\LIGHUEN\GIT\Dealership\App\App.Api\bin\Debug\netcoreapp2.1\App.Api.runtimeconfig.json
+D:\LIGHUEN\GIT\Dealership\App\App.Api\bin\Debug\netcoreapp2.1\App.Api.runtimeconfig.dev.json
+D:\LIGHUEN\GIT\Dealership\App\App.Api\bin\Debug\netcoreapp2.1\App.Api.dll
+D:\LIGHUEN\GIT\Dealership\App\App.Api\bin\Debug\netcoreapp2.1\App.Api.pdb
+D:\LIGHUEN\GIT\Dealership\App\App.Api\obj\Debug\netcoreapp2.1\App.Api.csprojAssemblyReference.cache
+D:\LIGHUEN\GIT\Dealership\App\App.Api\obj\Debug\netcoreapp2.1\App.Api.csproj.CoreCompileInputs.cache
+D:\LIGHUEN\GIT\Dealership\App\App.Api\obj\Debug\netcoreapp2.1\App.Api.RazorAssemblyInfo.cache
+D:\LIGHUEN\GIT\Dealership\App\App.Api\obj\Debug\netcoreapp2.1\App.Api.RazorAssemblyInfo.cs
+D:\LIGHUEN\GIT\Dealership\App\App.Api\obj\Debug\netcoreapp2.1\App.Api.AssemblyInfoInputs.cache
+D:\LIGHUEN\GIT\Dealership\App\App.Api\obj\Debug\netcoreapp2.1\App.Api.AssemblyInfo.cs
+D:\LIGHUEN\GIT\Dealership\App\App.Api\obj\Debug\netcoreapp2.1\App.Api.RazorTargetAssemblyInfo.cache
+D:\LIGHUEN\GIT\Dealership\App\App.Api\obj\Debug\netcoreapp2.1\App.Api.dll
+D:\LIGHUEN\GIT\Dealership\App\App.Api\obj\Debug\netcoreapp2.1\App.Api.pdb

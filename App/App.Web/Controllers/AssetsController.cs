@@ -9,7 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace App.Web.Controllers
 {
-    public class AssetsController : Controller
+    [Route("[controller]")]
+    public class AssetsController : BaseController
     {
         public AssetsController(IServices<AssetDto> assetsService)
         {
@@ -18,88 +19,28 @@ namespace App.Web.Controllers
 
         public IServices<AssetDto> _assetsService { get; set; }
 
-        // GET: Assets
-        public ActionResult Index()
-        {
-            var assets = _assetsService.List();
-
-
-            return View();
-        }
-
-        // GET: Assets/Details/5
-        public ActionResult Details(int id)
+        [Route("List")]
+        public ActionResult List()
         {
             return View();
         }
 
-        // GET: Assets/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Assets/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        [HttpGet]
+        [Route("")]
+        public ActionResult GetAssets()
         {
             try
             {
-                // TODO: Add insert logic here
+                var assets = _assetsService.List();
 
-                return RedirectToAction(nameof(Index));
+                return JsonReturn(assets);
+
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                throw new Exception(ex.Message);
             }
         }
 
-        // GET: Assets/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Assets/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Assets/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Assets/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

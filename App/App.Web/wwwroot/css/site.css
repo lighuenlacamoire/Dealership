@@ -1,8 +1,15 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
+html {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 /* Wrapping element */
@@ -35,3 +42,1153 @@ body {
         display: none;
     }
 }
+
+/* header */
+.header {
+    background-color: #3cade7;
+    box-sizing: border-box;
+    height: 65px;
+    padding: 0.25rem 5%;
+    position: relative;
+    width: 100%;
+}
+
+.header-logo {
+    float: left;
+    position: relative;
+    background-color: white;
+    border-radius: 25%;
+}
+    .header-logo > .logo {
+        height: 5rem;
+        margin:-6px;
+    }
+
+    .header-actions {
+        float: right;
+        position: relative;
+    }
+
+
+    .header-actions > .header-title {
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: inherit;
+        margin-bottom:14px;
+        margin-top: 14px;
+    }
+
+.header-actions-button {
+    background-color: transparent;
+    border: none;
+    height: 1.5rem;
+    margin: 0 0 0 1rem;
+    padding: 0;
+}
+
+    .header-actions-button > .fa {
+        background-color: transparent;
+        color: #FFFFFF;
+    }
+
+/* navbar */
+
+.navbar-DMS {
+    position: sticky !important;
+    margin-bottom: 0px !important;
+    border: 0;
+    font-size: 14px !important;
+    font-weight: bold;
+    border-radius: 0px !important;
+}
+
+    .navbar-DMS > .navbar-header {
+        background-color: #00a087;
+    }
+
+    .navbar-DMS > .navbar-collapse {
+        background-color: #009454;
+    }
+
+.navbar-item {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+    .navbar-item:hover, .navbar-item:focus, .open > .navbar-item {
+        color: white;
+        background-color: #77b300 !important;
+        -webkit-transition: background .2s ease;
+        -ms-transition: background .2s ease;
+        transition: background .2s ease;
+    }
+
+.navbar-DMS .open > .dropdown-menu {
+    background-color: seashell;
+}
+
+    .navbar-DMS .open > .dropdown-menu > li > a:focus, .navbar-DMS .open > .dropdown-menu > li > a:hover {
+        -webkit-box-shadow: inset 1px 1px 10px #555;
+        -moz-box-shadow: inset 1px 1px 10px #555;
+        box-shadow: inset 1px 1px 10px #555;
+        background: papayawhip;
+    }
+
+
+.navbar-DMS li.dropdown > a {
+    padding-right: 30px;
+}
+
+    .navbar-DMS li.dropdown > a:before {
+        content: '';
+        background: none;
+        font-family: 'FontAwesome';
+        content: '\f078';
+        width: 1rem;
+        height: 8px;
+        position: absolute;
+        right: 6px;
+        color: white;
+        -webkit-transition: all .2s ease;
+        -ms-transition: all .2s ease;
+        transition: all .2s ease;
+    }
+
+    .navbar-DMS li.dropdown > a[aria-expanded="false"]:before {
+        content: '\f078';
+    }
+
+    .navbar-DMS li.dropdown > a[aria-expanded="true"]:before {
+        content: '\f077';
+    }
+
+
+.navbar-collapse {
+    border-top: 1px solid white !important;
+}
+
+.navbar-right {
+    margin-right: 0px !important;
+    padding: 0 5%;
+}
+
+.tabs-container {
+    box-sizing: border-box;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    padding: -2.3rem 5%;
+}
+
+button.navbar-toggle > .fa {
+    color: whitesmoke;
+}
+
+/*tabs*/
+
+.tab {
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 0 0 1rem 1rem;
+    padding: 0 1rem;
+}
+
+
+    .tab:focus {
+        outline: none;
+    }
+
+.tab-panel {
+    background-color: whitesmoke;
+    /*background: rgb(244, 244, 244);*/
+    border: 1px solid #cccccc;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.tab-panel-content h3 {
+    width: 100%;
+    float: left;
+    background-color: #005494;
+    color: #FFFFFF;
+    padding: 8px 14px;
+    margin: 0;
+    font-size: 14px;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+}
+
+
+.tab-panel-button {
+    background-color: #76c77d;
+    border: #76c77d;
+    border-radius: 0.5rem;
+    color: white;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+/* page */
+
+.page-container {
+    float: left;
+    padding: 2rem 5%;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 20rem);
+    height: -webkit-calc(100vh - 20rem);
+    height: -moz-calc(100vh - 20rem);
+    /*overflow: scroll;*/
+}
+
+h3.page-title {
+    /*color: #0B3D91;*/
+    font-weight: bold;
+    font-size: 1.5rem;
+    /*margin: 0;*/
+    margin: 0 0 -1rem 0;
+}
+
+h3.page-title-dependency {
+    background-color: #3971c6;
+    color: white;
+    font-size: 15px;
+    font-size: large;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.page-content > h3.page-title {
+    color: white;
+    border-radius: 20px 20px 0 0;
+    padding: 1rem;
+    background-color: #77b300;
+}
+
+
+h4.page-title {
+    color: #0B3D91;
+    margin: 0;
+}
+
+.page-content {
+    margin-top: 1rem;
+}
+
+/*tooltip*/
+tooltip-inner {
+    color: #FFFF00;
+    background-color: #FF0000;
+}
+
+.tooltip-arrow {
+    border-top-color: #FF0000 !important;
+    border-style: dotted;
+}
+
+.form-label {
+    font-weight: 500;
+    font-size: larger;
+    padding-top: 7px;
+}
+
+/*extras*/
+.control-container {
+    width: 100%;
+    /*overflow: scroll;*/
+    overflow-x: auto;
+    overflow-y: auto;
+    padding: 2rem;
+    /*border: 0.1rem solid #76c77d;*/
+    background-color: white;
+    /*border-radius: 0.5rem;*/
+    /*border-radius: 2rem;*/
+    /*background:linear-gradient(90deg, #d4d4d4, #fff) content-box, linear-gradient(90deg, #fff, #d2d2d2);*/
+    box-shadow: 1em 1em 1.5em rgba(0, 0, 0, 0.15);
+}
+
+/*3cade7*/
+
+.rowSelected {
+    background-color: #71C5EF !important;
+    color: white;
+    font-weight: 700;
+}
+
+/* footer */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem 5%;
+    background-color: #ccc;
+}
+
+    .footer p {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+/* responsive styles */
+@media screen and (max-width: 991px) {
+}
+
+/*Desde aqui*/
+
+.container {
+    line-height: 1;
+    margin: 0;
+    min-height: 0;
+    padding: 2rem 5%;
+    position: relative;
+    width: 100%;
+}
+
+.icon-bluegreen > .fa {
+    color: #20b49c;
+}
+
+.icon-bluegreen:hover > .fa {
+    color: #188976;
+}
+
+
+.icon-green > .fa {
+    color: green;
+}
+
+.icon-green:hover > .fa {
+    color: darkgreen;
+}
+
+
+.icon-blue > .fa {
+    color: #008FFF; /*#337ab7;*/
+}
+
+.icon-blue:hover > .fa {
+    color: #224f77;
+}
+
+
+.icon-red > .fa {
+    color: red;
+}
+
+.icon-red:hover > .fa {
+    color: darkred;
+}
+
+
+.icon-yellow > .fa {
+    color: #b38f00;
+}
+
+.icon-yellow:hover > .fa {
+    color: #806600;
+}
+
+/*Buttons*/
+.btn-round {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+    .btn-round.btn-lg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .btn-round.btn-sm {
+        width: 34px;
+        height: 34px;
+    }
+
+    .btn-round.btn-xs {
+        width: 24px;
+        height: 24px;
+    }
+
+a, button {
+    cursor: pointer;
+}
+
+    button:focus {
+        outline: none !important;
+    }
+
+
+    a > i.fa {
+        margin: 0 5px;
+    }
+
+    a:hover > i.fa {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+
+
+.btn-default {
+    border-radius: 12px;
+}
+
+    .btn-default:hover {
+        z-index: 1;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+        cursor: pointer;
+    }
+
+.buttoner-container {
+    background-color: #D8F2BC;
+    padding: 1rem;
+    border-radius: 15px;
+    border-style: solid;
+    border-radius: 12px;
+    border-width: 0.5px;
+    border-color: #996600;
+    box-shadow: 5px 5px #888888;
+    vertical-align: middle;
+}
+
+
+.raise-button {
+    display: inline-block;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
+    font-family: sans-serif;
+    cursor: pointer;
+    border: none;
+    padding: 12px 20px 12px 20px;
+    margin: 5px;
+    /*background-color: transparent;*/
+    text-align: center;
+    font-weight: bold;
+    background-color: #FFF !important;
+    text-transform: uppercase;
+    color: #222 !important;
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.35), 0 2px 2px 0 rgba(0, 0, 0, 0.59);
+}
+
+    .raise-button:focus {
+        outline: none;
+    }
+
+
+
+    .raise-button:hover {
+        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.3), 0 15px 15px 0 rgba(0, 0, 0, 0.4);
+        background-color: #f59e00 !important;
+        color: white !important;
+    }
+
+    .raise-button:active {
+        -webkit-transition: 0.05s ease-out;
+        transition: 0.05s ease-out;
+        box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.44), 0 2px 2px 0 rgba(0, 0, 0, 0.68);
+    }
+
+
+.btn-outer {
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    text-transform: uppercase;
+    z-index: 1;
+    padding: 12px 12px 12px 12px;
+    margin: 12px 0 12px 0;
+    text-align: center;
+    font-weight: bold;
+    background: white;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+    white-space: pre-line;
+    color: #222;
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.35), 0 2px 2px 0 rgba(0, 0, 0, 0.59);
+}
+
+    .btn-outer:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 0;
+        height: 100%;
+        background: #f59e00;
+        z-index: -1;
+        -webkit-transition: width 150ms ease-in-out;
+        transition: width 150ms ease-in-out;
+    }
+
+    .btn-outer:hover {
+        color: white;
+        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.3), 0 15px 15px 0 rgba(0, 0, 0, 0.4);
+    }
+
+        .btn-outer:hover:after {
+            width: 110%;
+        }
+
+    .btn-outer[disabled]:after {
+        background: transparent;
+    }
+
+
+
+.btn-inner {
+    margin: 0.4em 0.4em;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    background-color: #eee;
+    padding: 0.7em 0.8em;
+    cursor: pointer;
+    color: #222;
+    border: none;
+    font-weight: bold;
+    text-decoration: none !important;
+    white-space: pre-line;
+    transition: all 0.2s;
+    box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.6);
+    border-radius: 4px;
+}
+
+    .btn-inner:active {
+        -webkit-box-shadow: inset 1px 1px 10px #555;
+        -moz-box-shadow: inset 1px 1px 10px #555;
+        box-shadow: inset 1px 1px 10px #555;
+    }
+
+    .btn-inner:hover {
+        color: #eee;
+        background-color: #77b300; /*#009688;*/
+    }
+
+        .btn-inner:hover > i.fa {
+            color: #eee;
+        }
+
+/*dividers*/
+hr.page-title-divider {
+    border-color: #0B3D91;
+}
+
+/*Tablas*/
+.table-scroll {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin: auto;
+    overflow: scroll;
+}
+
+    .table-scroll table {
+        width: 100%;
+        margin: auto;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+.table-wrap {
+    position: relative;
+}
+
+.table-scroll th,
+.table-scroll td {
+    padding: 5px 10px;
+    border: 1px solid #000;
+    /*background: #fff;*/
+    vertical-align: middle;
+}
+
+.table-scroll thead th {
+    background: #1d96b2;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    z-index: 9; /*de esta manera los checkbox no aparecen por arriba*/
+}
+
+.table-scroll tbody > tr:hover {
+    /*box-shadow:1em 1em 1.5em rgba(0, 0, 0, 0.15);*/
+    -webkit-box-shadow: inset 1px 1px 10px #555;
+    -moz-box-shadow: inset 1px 1px 10px #555;
+    box-shadow: inset 1px 1px 10px #555;
+    /*border: 3px solid #00d7c3;*/
+}
+/* safari and ios need the tfoot itself to be position:sticky also */
+.table-scroll tfoot,
+.table-scroll tfoot th,
+.table-scroll tfoot td {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background: #555;
+    color: #fff;
+    z-index: 4;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/*Scrolling*/
+*::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+
+/*Fecha*/
+input[type="date"] {
+    position: relative;
+}
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        color: transparent;
+        background: none;
+        z-index: 1;
+    }
+
+    input[type="date"]:before {
+        color: transparent;
+        background: none;
+        display: block;
+        font-family: 'FontAwesome';
+        content: '\f073';
+        width: 1rem;
+        height: 100%;
+        /* This is the calendar icon in FontAwesome */
+        position: absolute;
+        right: 6px;
+        color: #008FFF;
+    }
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: inner-spin-button !important;
+    width: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+/*Checkbox Button*/
+.btn-check {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+}
+
+    .btn-check:before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: rgba(34,50,84,0.03);
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    .btn-check svg {
+        position: relative;
+        z-index: 1;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: #c8ccd4;
+        stroke-width: 3;
+        transform: translate3d(0, 0, 0);
+        transition: all 0.2s ease;
+    }
+
+        .btn-check svg path {
+            stroke-dasharray: 60;
+            stroke-dashoffset: 0;
+        }
+
+        .btn-check svg polyline {
+            stroke-dasharray: 22;
+            stroke-dashoffset: 66;
+        }
+
+    .btn-check:hover:before {
+        opacity: 1;
+    }
+
+    .btn-check:hover svg {
+        stroke: #008FFF;
+    }
+
+    .btn-check input:checked + svg {
+        stroke: #008FFF;
+    }
+
+        .btn-check input:checked + svg path {
+            stroke-dashoffset: 60;
+            transition: all 0.3s linear;
+        }
+
+        .btn-check input:checked + svg polyline {
+            stroke-dashoffset: 42;
+            transition: all 0.2s linear;
+            transition-delay: 0.15s;
+        }
+
+
+/*Radio button*/
+.btn-radio {
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+    .btn-radio:not(:first-child) {
+        margin-left: 20px;
+    }
+
+@media screen and (max-width: 480px) {
+    .btn-radio {
+        display: block;
+        float: none;
+    }
+
+        .btn-radio:not(:first-child) {
+            margin-left: 0;
+            margin-top: 15px;
+        }
+}
+
+.btn-radio svg {
+    fill: none;
+    vertical-align: middle;
+}
+
+    .btn-radio svg circle {
+        stroke-width: 2;
+        stroke: #C8CCD4;
+    }
+
+    .btn-radio svg path {
+        stroke: #008FFF;
+    }
+
+        .btn-radio svg path.inner {
+            stroke-width: 6;
+            stroke-dasharray: 19;
+            stroke-dashoffset: 19;
+        }
+
+        .btn-radio svg path.outer {
+            stroke-width: 2;
+            stroke-dasharray: 57;
+            stroke-dashoffset: 57;
+        }
+
+.btn-radio input {
+    display: none;
+}
+
+    .btn-radio input:checked + svg path {
+        transition: all 0.4s ease;
+    }
+
+        .btn-radio input:checked + svg path.inner {
+            stroke-dashoffset: 38;
+            transition-delay: 0.3s;
+        }
+
+        .btn-radio input:checked + svg path.outer {
+            stroke-dashoffset: 0;
+        }
+
+.btn-radio span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.btn-radio input:checked[disabled] + svg path {
+    stroke: #757575;
+}
+
+/*plantilla exhibidor*/
+.plantilla {
+    text-align: center;
+    background-color: grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-color: darkgrey;
+    border-width: 2px;
+}
+
+.row > div > .cuadro {
+    border-color: darkgray;
+    border-style: solid;
+    border-spacing: 5px;
+    border-width: 5px;
+    margin: 0.5rem;
+    height: 70px;
+    font-weight: 700;
+}
+
+/*Selects*/
+select {
+    /* styling */
+    background-color: white;
+    border-radius: 5px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+    /* reset */
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+    select.minimal {
+        background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+        background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+        background-size: 5px 5px, 5px 5px, 1px 1.5em;
+        background-repeat: no-repeat;
+    }
+
+        select.minimal:focus {
+            background-image: linear-gradient(45deg, #008FFF 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #008FFF 50%), linear-gradient(to right, #ccc, #ccc);
+            background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
+            background-size: 5px 5px, 5px 5px, 1px 1.5em;
+            background-repeat: no-repeat;
+            border-color: #008FFF;
+            outline: 0;
+        }
+
+
+
+.results tr[visible='false'],
+.no-result {
+    display: none;
+}
+
+.results tr[visible='true'] {
+    display: table-row;
+}
+
+
+
+/*tabs*/
+.nav-tabs-DMS {
+    display: flex !important;
+}
+
+    .nav-tabs-DMS > .tab-link {
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        vertical-align: middle;
+        /*background: #333333;*/
+        float: left;
+        cursor: pointer;
+        background: #e6e6e6;
+        padding: 0px !important;
+        display: flex !important;
+        flex: 1 !important;
+    }
+
+        .nav-tabs-DMS > .tab-link > a {
+            border: none !important;
+            flex: 1 !important;
+        }
+
+        .nav-tabs-DMS > .tab-link.active {
+            position: relative;
+            background: #1d96b2 !important;
+            color: white !important;
+        }
+
+            .nav-tabs-DMS > .tab-link.active > a {
+                background: inherit !important;
+                color: inherit !important;
+            }
+
+            .nav-tabs-DMS > .tab-link.active:after {
+                top: 100%;
+                left: 50%;
+                border: solid transparent;
+                content: '';
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-color: transparent;
+                border-top-color: #1d96b2 !important;
+                border-width: 20px;
+                margin-left: -20px;
+                z-index: 101;
+            }
+
+
+        .nav-tabs-DMS > .tab-link:hover:after {
+            top: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: '';
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: transparent;
+            border-top-color: papayawhip;
+            border-width: 20px;
+            margin-left: -20px;
+            z-index: 101;
+        }
+
+
+        .nav-tabs-DMS > .tab-link > a:hover {
+            background-color: papayawhip;
+        }
+
+@media screen and (max-width: 735px) {
+    .nav-tabs-DMS > .tab-link {
+        width: 100%;
+    }
+}
+
+
+.alert {
+    line-height: 1.5rem;
+}
+
+/*Chart Arbol orgchart*/
+.arbol-generico {
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align: center;
+    border-radius: 12px;
+    -webkit-box-shadow: inset 1px 1px 12px #9999;
+    -moz-box-shadow: inset 1px 1px 12px #9999;
+    box-shadow: inset 1px 1px 12px #999;
+}
+
+    .arbol-generico .orgchart .node .content {
+        display: none;
+    }
+
+    .arbol-generico .orgchart .node .edge {
+        color: #77b300;
+        font-size: 18px;
+    }
+
+    .arbol-generico .orgchart {
+        background-image: none;
+        background-size: inherit;
+    }
+
+        .arbol-generico .orgchart .node .title {
+            border-radius: 8px;
+            height: 100px;
+            text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.7);
+            white-space: pre-wrap;
+            padding: 5px;
+        }
+
+.arbol-agente-sector .orgchart .node .title {
+    background-color: #c12525;
+}
+
+    .arbol-agente-sector .orgchart .node .title:hover {
+        cursor: pointer;
+        background-color: #961d1d;
+    }
+
+.arbol-agente-sector .orgchart .lines .downLine {
+    background-color: #d62929;
+}
+
+.arbol-agente-sector .orgchart .lines .leftLine {
+    border-left: 1px solid #d62929;
+}
+
+.arbol-agente-sector .orgchart .lines .rightLine {
+    border-right: 1px solid #d62929;
+}
+
+.arbol-agente-sector .orgchart .lines .topLine {
+    border-top: 2px solid #d62929;
+}
+
+
+.arbol-agente-sector .orgchart .SECTORFO .title i.fa-lg {
+    float: left;
+    padding: 8px;
+    background: #f59e00;
+    border-radius: 50%;
+}
+
+.arbol-agente-sector .orgchart .AGENTE .title {
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    background-color: #1d96b2;
+}
+
+    .arbol-agente-sector .orgchart .AGENTE .title:active,
+    .arbol-agente-sector .orgchart .AGENTE .title:active:before,
+    .arbol-agente-sector .orgchart .AGENTE .title:active:after {
+        cursor: -webkit-grabbing;
+        cursor: -moz-grabbing;
+    }
+
+.arbol-agente-sector .orgchart .Asignado .title {
+    background-color: #009454;
+}
+
+    .arbol-agente-sector .orgchart .Asignado .title:hover {
+        background-color: #009454;
+    }
+
+.arbol-agente-sector .orgchart .AGENTE .title:hover {
+    background-color: #008FFF;
+}
+
+
+.autocomplete-items {
+    position: relative;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+    .autocomplete-items div {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #fff;
+        border-bottom: 1px solid #d4d4d4;
+    }
+
+        /*when hovering an item:*/
+        .autocomplete-items div:hover {
+            background-color: #e9e9e9;
+        }
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
+
+/*Desahabilitados*/
+a[disabled] {
+    pointer-events: none;
+}
+
+label > input[disabled] + svg {
+    opacity: 0.9 !important;
+    cursor: not-allowed !important;
+    stroke: gray !important;
+}
+
+input[type="date"][disabled]:before {
+    color: transparent;
+    background: none;
+    display: block;
+    font-family: 'FontAwesome';
+    content: '\f073';
+    width: 1rem;
+    height: 100%;
+    /* This is the calendar icon in FontAwesome */
+    position: absolute;
+    right: 6px;
+    color: gray !important;
+}
+
+[disabled] {
+    opacity: 0.9 !important;
+    color: gray !important;
+    background-color: #f5f5f5 !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+    border: 1px solid rgb(169, 169, 169);
+    box-sizing: border-box;
+}
+
+    [disabled] thead th {
+        background-color: gray !important;
+        color: #f5f5f5 !important;
+    }
+
+    [disabled] tr {
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    [disabled] i.fa {
+        opacity: 0.9 !important;
+        color: gray !important;
+    }
+
+td > a[disabled] {
+    opacity: initial !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+    td > a[disabled] > i.fa {
+        opacity: initial !important;
+    }
