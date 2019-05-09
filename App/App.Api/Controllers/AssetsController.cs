@@ -14,7 +14,7 @@ namespace App.Api.Controllers
     [ApiController]
     public class AssetsController : ControllerBase
     {
-        // GET: api/Assets
+        #region [ GET: Asset - Get all Assets ]
         [HttpGet]
         public ServiceResponse<IEnumerable<AssetDto>> Get()
         {
@@ -54,6 +54,23 @@ namespace App.Api.Controllers
                 return new ServiceResponse<IEnumerable<AssetDto>> { Success = false, Message = ex.Message };
             }
         }
+        #endregion
 
+        #region [ POST: Asset - Create a new asset ]
+        [HttpPost]
+        public ServiceResponse<AssetDto> Post([FromBody]AssetDto assetDto)
+        {
+            try
+            {
+                assetDto.Id = "26568724884522";
+                return new ServiceResponse<AssetDto> { Success = true, Message = "Has been registered successfully", Data= assetDto };
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex);
+                return new ServiceResponse<AssetDto> { Success = false, Message = ex.Message };
+            }
+        }
+        #endregion
     }
 }

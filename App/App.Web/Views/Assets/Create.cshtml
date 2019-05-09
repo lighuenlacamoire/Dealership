@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-content">
+
+    <div class="row">
+        <div class="col-sm-10 page-content">
+            <h3 class="page-title">Creation</h3>
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="control-container form-horizontal">
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="row">
+                <div class="col-sm-12">
+                    <a class="btn btn-block btn-outer" onclick="InitViewAssetsList();">Refresh</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            InitViewAssetsCreation();
+        });
+
+    function InitViewAssetsCreation() {
+
+    }
+    </script>
+}

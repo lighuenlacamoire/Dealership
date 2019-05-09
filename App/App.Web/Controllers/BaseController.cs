@@ -30,5 +30,11 @@ namespace App.Web.Controllers
                 Content = JsonConvert.SerializeObject(data, jsonFormatter)
             };
         }
+
+        public void PublicLog(string Message)
+        {
+            string ErrorLog = DateTime.Now.ToString("yyyy-dd-MM hh:mm:ss,fff") + " - " + Message;
+            Console.WriteLine(ErrorLog);
+        }
     }
 }

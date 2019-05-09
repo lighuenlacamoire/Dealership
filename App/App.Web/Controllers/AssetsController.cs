@@ -19,12 +19,23 @@ namespace App.Web.Controllers
 
         public IServices<AssetDto> _assetsService { get; set; }
 
+        #region [ View: Assets List]
         [Route("List")]
         public ActionResult List()
         {
             return View();
         }
+        #endregion
 
+        #region [ View: Create new asset]
+        [Route("Create")]
+        public ActionResult Create()
+        {
+            return View();
+        }
+        #endregion
+
+        #region [ Method: Get all assets ]
         [HttpGet]
         [Route("")]
         public ActionResult GetAssets()
@@ -38,9 +49,10 @@ namespace App.Web.Controllers
             }
             catch (Exception ex)
             {
+                PublicLog(ex.Message);
                 throw new Exception(ex.Message);
             }
         }
-
+        #endregion
     }
 }
