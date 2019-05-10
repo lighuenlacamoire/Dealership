@@ -14,7 +14,23 @@ namespace App.Api
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            var config = new ConfigurationBuilder()
+                .AddEnvironmentVariables()
+                .Build();
+            // You need to add these lines for accessing outside of Docker
+            var url = config["ASPNETCORE_URLS"] ?? "http://*:44355";
+            var env = config["ASPNETCORE_ENVIRONMENT"] ?? "Development";
+            
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseUrls(url)
+                .UseEnvironment(env)
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
+                .UseStartup<Startup>()
+                .Build();
+
+            host.Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

@@ -48,7 +48,7 @@ namespace App.Web
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //Here we add the dependency injection of our services 
-            services.AddSingleton<IServices<AssetDto>>(provider => new AssetsService(Configuration["AssetServiceEndpoint"]));
+            services.AddSingleton<IServices<AssetDto>>(provider => new AssetsService(Environment.GetEnvironmentVariable("AssetServiceEndpoint") ?? Configuration["AssetServiceEndpoint"]));
 
         }
 

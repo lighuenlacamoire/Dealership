@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  app.web:
+    image: ${DOCKER_REGISTRY-}appweb
+    build:
+      context: .
+      dockerfile: App\App.Web\Dockerfile
+
+  app.api:
+    image: ${DOCKER_REGISTRY-}appapi
+    build:
+      context: .
+      dockerfile: App\App.Api\Dockerfile
+

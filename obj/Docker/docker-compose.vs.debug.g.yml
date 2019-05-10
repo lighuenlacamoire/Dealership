@@ -1,0 +1,45 @@
+version: '3.4'
+
+services:
+  app.api:
+    image: appapi:dev
+    build:
+      target: base
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - NUGET_PACKAGES=C:\.nuget\packages
+      - NUGET_FALLBACK_PACKAGES=c:\.nuget\fallbackpackages;c:\.nuget\fallbackpackages2
+    volumes:
+      - D:\LIGHUEN\GIT\Dealership\App\App.Api:C:\app
+      - C:\Users\USUARIO\onecoremsvsmon\16.0.28714.193:C:\remote_debugger:ro
+      - C:\Users\USUARIO\.nuget\packages\:c:\.nuget\packages:ro
+      - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:c:\.nuget\fallbackpackages:ro
+      - C:\ProgramData\Xamarin\NuGet\:c:\.nuget\fallbackpackages2:ro
+    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "\"C:\\Program Files\\dotnet\\dotnet.exe\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath c:\\.nuget\\packages --additionalProbingPath c:\\.nuget\\fallbackpackages --additionalProbingPath c:\\.nuget\\fallbackpackages2  \"bin\\Debug\\netcoreapp2.1\\App.Api.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "C:\\app"
+      com.microsoft.visualstudio.debuggee.killprogram: "C:\\remote_debugger\\x64\\utils\\KillProcess.exe dotnet.exe"
+
+  app.web:
+    image: appweb:dev
+    build:
+      target: base
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - NUGET_PACKAGES=C:\.nuget\packages
+      - NUGET_FALLBACK_PACKAGES=c:\.nuget\fallbackpackages;c:\.nuget\fallbackpackages2
+    volumes:
+      - D:\LIGHUEN\GIT\Dealership\App\App.Web:C:\app
+      - C:\Users\USUARIO\onecoremsvsmon\16.0.28714.193:C:\remote_debugger:ro
+      - C:\Users\USUARIO\.nuget\packages\:c:\.nuget\packages:ro
+      - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:c:\.nuget\fallbackpackages:ro
+      - C:\ProgramData\Xamarin\NuGet\:c:\.nuget\fallbackpackages2:ro
+    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "\"C:\\Program Files\\dotnet\\dotnet.exe\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath c:\\.nuget\\packages --additionalProbingPath c:\\.nuget\\fallbackpackages --additionalProbingPath c:\\.nuget\\fallbackpackages2  \"bin\\Debug\\netcoreapp2.1\\App.Web.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "C:\\app"
+      com.microsoft.visualstudio.debuggee.killprogram: "C:\\remote_debugger\\x64\\utils\\KillProcess.exe dotnet.exe"
+

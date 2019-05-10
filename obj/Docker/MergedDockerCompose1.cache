@@ -1,0 +1,41 @@
+networks:
+  default:
+    external:
+      name: nat
+services:
+  app.web:
+    build:
+      context: D:\LIGHUEN\GIT\Dealership
+      dockerfile: App\App.Web\Dockerfile
+      target: base
+    entrypoint: C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus
+      /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: c:\.nuget\fallbackpackages;c:\.nuget\fallbackpackages2
+      NUGET_PACKAGES: C:\.nuget\packages
+    image: appweb:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath c:\.nuget\packages
+        --additionalProbingPath c:\.nuget\fallbackpackages --additionalProbingPath
+        c:\.nuget\fallbackpackages2  "bin\Debug\netcoreapp2.1\App.Web.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: C:\remote_debugger\x64\utils\KillProcess.exe
+        dotnet.exe
+      com.microsoft.visualstudio.debuggee.program: '"C:\Program Files\dotnet\dotnet.exe"'
+      com.microsoft.visualstudio.debuggee.workingdirectory: C:\app
+    ports:
+    - published: 51441
+      target: 80
+    - published: 443
+      target: 443
+    volumes:
+    - C:\Users\USUARIO\AppData\Roaming\ASP.NET\Https:C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https:ro
+    - C:\Users\USUARIO\AppData\Roaming\Microsoft\UserSecrets:C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets:ro
+    - D:\LIGHUEN\GIT\Dealership\App\App.Web:C:\app:rw
+    - C:\Users\USUARIO\onecoremsvsmon\16.0.28714.193:C:\remote_debugger:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:c:\.nuget\fallbackpackages:ro
+    - C:\ProgramData\Xamarin\NuGet:c:\.nuget\fallbackpackages2:ro
+    - C:\Users\USUARIO\.nuget\packages:c:\.nuget\packages:ro
+version: '3.4'
