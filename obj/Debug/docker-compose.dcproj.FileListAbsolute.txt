@@ -1,9 +1,0 @@
-D:\LIGHUEN\GIT\Dealership\bin\Debug\App.Web.Views.dll
-D:\LIGHUEN\GIT\Dealership\bin\Debug\App.Web.Views.pdb
-D:\LIGHUEN\GIT\Dealership\bin\Debug\App.Api.dll
-D:\LIGHUEN\GIT\Dealership\bin\Debug\App.Web.dll
-D:\LIGHUEN\GIT\Dealership\bin\Debug\App.Web.pdb
-D:\LIGHUEN\GIT\Dealership\bin\Debug\App.Api.pdb
-D:\LIGHUEN\GIT\Dealership\obj\Debug\docker-compose.dcprojAssemblyReference.cache
-D:\LIGHUEN\GIT\Dealership\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
-D:\LIGHUEN\GIT\Dealership\obj\Debug\docker-compose.dcproj.CopyComplete
